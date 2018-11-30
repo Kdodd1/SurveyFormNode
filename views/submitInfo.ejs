@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Submission Information</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<style>
+		.container{
+			width: 500px;
+		}
+	</style>
+
+</head>
+<body>
+	<div class="container">
+		<table class="table table-striped">
+		  <thead>
+		    <tr>
+		      <th scope="col">Submited Information</th>
+		    </tr>
+		  </thead>
+		  <tbody>
+				<% for(var x in data) {%>
+				<tr>
+		      <th scope="row">Name</th>
+		      <td><%= data[x].name%></td>
+		    </tr>
+
+		    <tr>
+		      <th scope="row">Location</th>
+		      <td><%= data[x].location%></td>
+		    </tr>
+		    <tr>
+		      <th scope="row">Language</th>
+		      <td><%= data[x].language%></td>
+		    </tr>
+		    <tr>
+		      <th scope="row">Comment</th>
+		      <td><%= data[x].comment%></td>
+		    </tr>
+				<% } %>
+		  </tbody>
+		</table>
+		<a href="/" class="btn btn-primary">Go Back</a>
+	</div>
+</body>
+</html>
